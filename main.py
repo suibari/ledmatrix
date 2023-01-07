@@ -2,7 +2,7 @@
 # Display a runtext and a static text with double-buffering.
 
 import sys
-sys.path.append("/home/pi/ledmatrix/work/rpi-rgb-led-matrix/bindings/python/rgbmatrix/")
+sys.path.append("./work/rpi-rgb-led-matrix/bindings/python/rgbmatrix/")
 
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 import graphics
@@ -96,9 +96,9 @@ class createLED():
         # 文字設定
         print("setting LED matrix options...")
         self.font.append(graphics.Font())
-        self.font[0].LoadFont("/home/pi/ledmatrix/src/font/sazanami-20040629/sazanami-gothic_14.bdf") # 上の行と分割しないとセグフォ
+        self.font[0].LoadFont("./src/font/sazanami-20040629/sazanami-gothic_14.bdf") # 上の行と分割しないとセグフォ
         self.font.append(graphics.Font())
-        self.font[1].LoadFont("/home/pi/ledmatrix/src/font/misaki_bdf_2021-05-05/misaki_gothic_2nd.bdf")
+        self.font[1].LoadFont("./src/font/misaki_bdf_2021-05-05/misaki_gothic_2nd.bdf")
         self.textColor.append(graphics.Color(255, 255, 0))
         
         # 画像設定
@@ -108,7 +108,7 @@ class createLED():
     def displayLEDTemp(self):
         print('display "WAITING..."')
         font_simple = graphics.Font()
-        font_simple.LoadFont("/home/pi/ledmatrix/work/rpi-rgb-led-matrix/fonts/5x8.bdf")
+        font_simple.LoadFont("./work/rpi-rgb-led-matrix/fonts/5x8.bdf")
         textColor_simple = graphics.Color(255, 255, 0)
         #while (self.flagPreparedToDisplay == False):
         timeout_start = time.time()
